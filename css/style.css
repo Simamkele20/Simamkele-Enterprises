@@ -7,6 +7,9 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
 
 Img[alt="Logo"] {
     cursor: pointer;
@@ -15,7 +18,13 @@ Img[alt="Logo"] {
 }
 
 footer{
-    margin-top: 190px;
+    margin-top: 210px;
+    background-color:  #36454f
+    
+}
+body{
+    background-color: black;
+    color: aliceblue;
 }
 
 
@@ -29,6 +38,7 @@ footer{
   }
   .Name span {
     font-family: 'Alfa Slab One', cursive;
+    color: aliceblue;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -36,14 +46,19 @@ footer{
     animation-delay: calc(.1s * var(--i));
     
   }
-  @keyframes Name {
+  @keyframes Name  {
     0%,40%,100% {
       transform: translateY(0)
     }
     20% {
       transform: translateY(-20px)
     }
+    
+
   }
+
+  
+
 
   /* About Content */
   .card{

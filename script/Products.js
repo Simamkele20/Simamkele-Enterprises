@@ -67,7 +67,7 @@ Products.forEach(Products => {
     items.innerHTML += `
   
     <div class="card mt-5 mb-5 m-4 p-2 text-center">
-  <img src="${Products.imgUrl}" class="card-img-top w-75 align-self-center" alt="...">
+  <img src="${Products.imgUrl}" class="card-img-top w-75 align-self-center img-fluid" alt="${Products.id}">
   <div class="card-body">
     <h5 class="card-title ">${Products.Description}</h5>
     <h3 class="card-text mt-4"> ${Products.amount}</h3>
@@ -82,27 +82,4 @@ Products.forEach(Products => {
 });
 }
 
-
-
 // Search Product by name
-
-
-
-
-
- 
-
-
-
-
-    
-
-
-
- 
-
-
-
-
-            
-

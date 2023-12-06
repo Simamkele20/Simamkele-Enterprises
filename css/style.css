@@ -2,93 +2,92 @@
 /* Universal Selector */
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
 Img[alt="Logo"] {
-    cursor: pointer;
-    width:5rem;
-    aspect-ratio: 1/1;  
+  cursor: pointer;
+  width: 5rem;
+  aspect-ratio: 1/1;
 }
 
-footer{
-    margin-top: 210px;
-    background-color:  #36454f
-    
+footer {
+  margin-top: 210px;
+  background-color: #36454f;
 }
-body{
-    background-color: black;
-    color: aliceblue;
+body {
+  background-color: black;
+  color: aliceblue;
 }
-
-
 
 /* Home Content */
 .Name {
-    position: relative;
-    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-    font-size: 60px;
-    margin-top: 170px;
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+  margin-top: 170px;
+}
+.Name span {
+  font-family: "Alfa Slab One", cursive;
+  color: aliceblue;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: Name 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes Name {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
   }
-  .Name span {
-    font-family: 'Alfa Slab One', cursive;
-    color: aliceblue;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    animation: Name 1s infinite;
-    animation-delay: calc(.1s * var(--i));
-    
+  20% {
+    transform: translateY(-20px);
   }
-  @keyframes Name  {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-20px)
-    }
-    
+}
 
-  }
+/* About Content */
+#AboutCard {
+  width: 200px;
+}
 
-  
+/* Product Content */
+#ProductCard {
+  width: 200px;
+  height: 410px;
+}
 
+#Product-Card {
+  width: 200px;
+  height: 410px;
+  margin-bottom: 32px;
+}
 
-  /* About Content */
-  .card{
-    
-    width: 200px;
+.card-img-top {
+  height: 300px;
+}
 
-  }
-
-
-
-
-
-
-
-
-  /*  Contact Content */
+/*  Contact Content */
 #contact {
   width: 100%;
   height: 100%;
   margin-top: 11px;
-padding-top: 50px;
+  padding-top: 50px;
 }
-
 
 .section-header {
   text-align: center;
   margin-top: 17px;
   padding: 40px 0;
-  font: 300 60px 'Oswald', sans-serif;
+  font: 300 60px "Oswald", sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -108,11 +107,11 @@ padding-top: 50px;
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 400;
 }
 
-.form-control, 
+.form-control,
 textarea {
   max-width: 400px;
   background-color: #ffffffec;
@@ -125,19 +124,19 @@ textarea {
   height: 34px;
   width: 400px;
   overflow: hidden;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .alt-send-button {
   width: 400px;
   height: 34px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .send-text {
   display: block;
   margin-top: 10px;
-  font: 700 12px 'Lato', sans-serif;
+  font: 700 12px "Lato", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -163,7 +162,7 @@ textarea {
 }
 
 .contact-text {
-  font: 300 18px 'Lato', sans-serif;
+  font: 300 18px "Lato", sans-serif;
   letter-spacing: 1.9px;
   color: #ffffff;
 }
@@ -191,7 +190,6 @@ textarea {
   text-decoration: none;
 }
 
-
 /* Social Media Icons */
 .social-media-list {
   position: relative;
@@ -207,7 +205,7 @@ textarea {
 }
 
 .contact-icon {
-  position: relative; 
+  position: relative;
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -215,13 +213,13 @@ textarea {
   line-height: 60px;
   border-radius: 50%;
   color: #fff;
-  background-color: rgb(27,27,27);
-  cursor: pointer; 
-  transition: all .2s ease-in-out;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .contact-icon:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -231,29 +229,26 @@ textarea {
   border-radius: 50%;
   opacity: 0;
   box-shadow: 0 0 0 1px #fff;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .contact-icon:hover {
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .contact-icon:hover:after {
-  opacity: 1;  
+  opacity: 1;
   transform: scale(1.12);
-  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
-.contact-icon:hover  {
+.contact-icon:hover {
   color: #000;
 }
 
-
-
 hr {
-  border-color: rgba(255,255,255,.6);
+  border-color: rgba(255, 255, 255, 0.6);
 }
-  
 
 /* Media Query */
 /* Contact Page */
@@ -262,14 +257,15 @@ hr {
     display: flex;
     flex-direction: column;
   }
-  .direct-contact-container, .form-horizontal {
+  .direct-contact-container,
+  .form-horizontal {
     margin: 0 auto;
-  }  
-  
+  }
+
   .direct-contact-container {
     margin-top: 60px;
     max-width: 300px;
-  }    
+  }
   .social-media-list a {
     height: 60px;
     width: 60px;
@@ -282,30 +278,29 @@ hr {
   }
 }
 
-
-@media screen and (max-width:555px) {
-  #contact-form{
+@media screen and (max-width: 555px) {
+  #contact-form {
     width: 200px;
   }
-  #submit{
-    width: 200px;}
-    .alt-send-button{
-      margin-left: -100px;
-    }
-    .direct-contact-container{
-      
-      margin-left: 60px;
-    }
-    .contact-text {
-      margin-left: -1px;
-    }
+  #submit {
+    width: 200px;
   }
+  .alt-send-button {
+    margin-left: -100px;
+  }
+  .direct-contact-container {
+    margin-left: 60px;
+  }
+  .contact-text {
+    margin-left: -1px;
+  }
+}
 
-  @media screen and (max-width:412px) {
-    .direct-contact-container{
-    
-      margin-left: -10px;}
-      .contact-text {
-        margin-left: -1px;}}
-  
-  
+@media screen and (max-width: 412px) {
+  .direct-contact-container {
+    margin-left: -10px;
+  }
+  .contact-text {
+    margin-left: -1px;
+  }
+}

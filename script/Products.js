@@ -99,19 +99,20 @@ let Products = JSON.parse(localStorage.getItem("products"))
       ])
     );
 
+// Display Data
 let items = document.querySelector("[data-items]");
 items.innerHtml = "";
 if (Products) {
   // Loop through products array
-  Products.forEach((Products) => {
+  Products.forEach((Product) => {
     items.innerHTML += `
   
     <div class="card mx-4 mt-3   text-center" id="ProductCard" >
-  <img src="${Products.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Products.id}">
+  <img src="${Product.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
   <div class="card-body">
-    <h5 class="card-title ">${Products.Description}</h5>
-    <h3 class="card-text mt-2">R ${Products.amount}</h3>
-    <a href="#" class="btn btn-dark mt-2" id="add-btn">Add to Cart</a>
+    <h5 class="card-title ">${Product.Description}</h5>
+    <h3 class="card-text mt-2">R ${Product.amount}</h3>
+    <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(Product)})'>Add to Cart</a>
   </div>
 </div>
 
@@ -130,15 +131,15 @@ searchInput.addEventListener("keyup", () => {
   });
   if (searchItems) {
     items.innerHTML = " ";
-    searchItems.forEach((Products) => {
+    searchItems.forEach((Product) => {
       items.innerHTML += `
   
     <div class="card mx-4 mt-3 text-center" id="Product-Card" >
-  <img src="${Products.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Products.id}">
+  <img src="${Product.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
   <div class="card-body">
-    <h5 class="card-title ">${Products.Description}</h5>
-    <h3 class="card-text mt-2">R ${Products.amount}</h3>
-    <a href="#" class="btn btn-dark " id="add-btn" >Add to Cart</a>
+    <h5 class="card-title ">${Product.Description}</h5>
+    <h3 class="card-text mt-2">R ${Product.amount}</h3>
+    <a href="#" class="btn btn-dark " id="add-btn" onclick='addToCart(${JSON.stringify(Product)})'>Add to Cart</a>
   </div>
 </div>
 
@@ -170,7 +171,7 @@ sortBtn.addEventListener("click", () => {
    <div class="card-body">
      <h5 class="card-title ">${sortedProducts.Description}</h5>
      <h3 class="card-text mt-2">R ${sortedProducts.amount}</h3>
-     <a href="#" class="btn btn-dark mt-2" id="add-btn">Add to Cart</a>
+     <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(sortedProducts)})'>Add to Cart</a>
    </div>
  </div>
  
@@ -180,15 +181,12 @@ sortBtn.addEventListener("click", () => {
   }
 });
 
-// empty array 
+// Add To Cart
 let emptyArray = [];
- 
-
-//  Add to Cart
-
-
-
-
-
-
+function addToCart(item){
+  if(item){
+    emptyArray.push(item)
+    localStorage.setItem('checkout', JSON.stringify(emptyArray))
+  }
+}
 

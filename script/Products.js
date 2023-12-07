@@ -33,7 +33,7 @@ let Products = JSON.parse(localStorage.getItem("products"))
         },
 
         {
-          "id ": 4,
+          id: 4,
           imgUrl: "https://i.postimg.cc/x8vsyjSR/shopping-12.webp",
           make: "iPhone",
           amount: 14000,
@@ -108,11 +108,15 @@ if (Products) {
     items.innerHTML += `
   
     <div class="card mx-4 mt-3   text-center" id="ProductCard" >
-  <img src="${Product.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
+  <img src="${
+    Product.imgUrl
+  }" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
   <div class="card-body">
     <h5 class="card-title ">${Product.Description}</h5>
     <h3 class="card-text mt-2">R ${Product.amount}</h3>
-    <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(Product)})'>Add to Cart</a>
+    <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(
+      Product
+    )})'>Add to Cart</a>
   </div>
 </div>
 
@@ -135,11 +139,15 @@ searchInput.addEventListener("keyup", () => {
       items.innerHTML += `
   
     <div class="card mx-4 mt-3 text-center" id="Product-Card" >
-  <img src="${Product.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
+  <img src="${
+    Product.imgUrl
+  }" class="card-img-top  align-self-center img-fluid" alt="${Product.id}">
   <div class="card-body">
     <h5 class="card-title ">${Product.Description}</h5>
     <h3 class="card-text mt-2">R ${Product.amount}</h3>
-    <a href="#" class="btn btn-dark " id="add-btn" onclick='addToCart(${JSON.stringify(Product)})'>Add to Cart</a>
+    <a href="#" class="btn btn-dark " id="add-btn" onclick='addToCart(${JSON.stringify(
+      Product
+    )})'>Add to Cart</a>
   </div>
 </div>
 
@@ -167,11 +175,17 @@ sortBtn.addEventListener("click", () => {
       items.innerHTML += `
   
      <div class="card mx-4 mt-3   text-center" id="ProductCard" >
-   <img src="${sortedProducts.imgUrl}" class="card-img-top  align-self-center img-fluid" alt="${sortedProducts.id}">
+   <img src="${
+     sortedProducts.imgUrl
+   }" class="card-img-top  align-self-center img-fluid" alt="${
+        sortedProducts.id
+      }">
    <div class="card-body">
      <h5 class="card-title ">${sortedProducts.Description}</h5>
      <h3 class="card-text mt-2">R ${sortedProducts.amount}</h3>
-     <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(sortedProducts)})'>Add to Cart</a>
+     <a href="#" class="btn btn-dark mt-2" id="add-btn" onclick='addToCart(${JSON.stringify(
+       sortedProducts
+     )})'>Add to Cart</a>
    </div>
  </div>
  
@@ -182,11 +196,10 @@ sortBtn.addEventListener("click", () => {
 });
 
 // Add To Cart
-let emptyArray = [];
-function addToCart(item){
-  if(item){
-    emptyArray.push(item)
-    localStorage.setItem('checkout', JSON.stringify(emptyArray))
+let emptyArray = JSON.parse(localStorage.getItem("checkout")) || [];
+function addToCart(item) {
+  if (item) {
+    emptyArray.push(item);
+    localStorage.setItem("checkout", JSON.stringify(emptyArray));
   }
 }
-

@@ -134,7 +134,7 @@ searchInput.addEventListener("keyup", () => {
     );
   });
   if (searchItems) {
-    items.innerHTML = " ";
+    items.innerHTML = "";
     searchItems.forEach((Product) => {
       items.innerHTML += `
   
@@ -154,7 +154,7 @@ searchInput.addEventListener("keyup", () => {
 
     `;
     });
-  }
+  } 
 });
 
 // Sort by Product Price

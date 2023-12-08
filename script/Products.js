@@ -155,7 +155,7 @@ searchInput.addEventListener("keyup", () => {
 
     `;
     });
-  } 
+  }
 });
 
 // Sort by Product Price

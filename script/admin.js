@@ -159,28 +159,26 @@ sortBtn.addEventListener("click", () => {
 });
 
 // Add Product
-let addProducts =document.getElementById("Add-btn");
-function newProducts(){
-    let description = document.getElementById("newDec").value;
-    let img = document.getElementById("newImg").value;
-    let Price = document.getElementById("newPrice").value;
+let addProducts = document.getElementById("Add-btn");
+function newProducts() {
+  let description = document.getElementById("newDec").value;
+  let img = document.getElementById("newImg").value;
+  let Price = document.getElementById("newPrice").value;
 
+  let obj = {
+    id: Products.length + 1,
+    Description: description,
+    imgUrl: img,
+    amount: Price,
+  };
 
-    let obj = {
-        id : Products.length+1,
-        Description : description,
-        imgUrl : img,
-        amount : Price,
-      
-    }
-
-    Products.push(obj);
-    localStorage.setItem("products",JSON.stringify(Products));  
-    ProductsTable.innerHtml = " ";
-if (Products) {
-  // Loop through products array
-  for (let key in Products) {
-    ProductsTable.innerHTML += `
+  Products.push(obj);
+  localStorage.setItem("products", JSON.stringify(Products));
+  ProductsTable.innerHtml = " ";
+  if (Products) {
+    // Loop through products array
+    for (let key in Products) {
+      ProductsTable.innerHTML += `
     
     <tr>
     <th scope="row">${Products[key][0].id}</th>
@@ -244,14 +242,10 @@ Delete
         
     
     `;
+    }
   }
 }
-   
-
-}
 addProducts.addEventListener("click", newProducts);
-
-
 
 // current year footer
 CurrentYear = new Date(Date.now());

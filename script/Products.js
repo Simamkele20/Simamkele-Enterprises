@@ -105,6 +105,7 @@ items.innerHtml = "";
 if (Products) {
   // Loop through products array
   Products.forEach((Product) => {
+    console.log(Product.amount);
     items.innerHTML += `
   
     <div class="card mx-4 mt-3   text-center" id="ProductCard" >

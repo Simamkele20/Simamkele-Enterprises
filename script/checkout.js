@@ -1,4 +1,4 @@
-let cart = JSON.parse(localStorage.getItem("checkout"));
+let cart = JSON.parse(localStorage.getItem("checkout")) || [];
 let cartTable = document.getElementById("Table-data");
 let cartProducts = Object.groupBy(cart, (item) => item.id);
 

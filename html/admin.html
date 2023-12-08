@@ -51,15 +51,61 @@
 
   <!-- Main Content -->
   <main class="container-fluid">
-  
-<div class=" text-center  mt-md-0 mb-4 "> 
-      <button class="btn btn-dark mt-4 mx-auto " type="button"aria-expanded="false" id="sort-btn">
-        Add Product
-      </button>
 
+    <div class="container  mt-4  d-block d-md-flex">
+      <div class="row d-block d-md-flex">
+  <div class="col ">
+<div class="   mt-md-0 mb-4 text-center "> 
+  <button type="button" class="btn btn-dark  " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Product</button>
+</div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Product ID:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+             <div class="mb-3">
+              <label for="message-text" class="col-form-label">Product Description:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Product imgUrl:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+           
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Product Price:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save Product</button>
+        </div>
+      </div>
+    </div>
   </div>
-   
   </div>
+</div>
+<div class="col  mb-4  mt-2  text-center"> 
+  <button class="btn btn-dark  " type="button"aria-expanded="false" id="sort-btn">
+    Sort by Price
+  </button>
+
+</div>
+
+
+</div>
+</div>
+
   <div class="container " id="table">
     <table class="table mt-5 m-0 text-center">
       <thead>
@@ -68,7 +114,6 @@
           <th scope="col">Description</th>
           <th scope="col">Image</th>
           <th scope="col">Price</th>
-          <th scope="col">Quantity</th>
         </tr>
 
 

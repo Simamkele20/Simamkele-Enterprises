@@ -88,7 +88,7 @@ body {
 #IMG {
   height: 180px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
   table {
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -175,7 +175,8 @@ body {
   text-align: center;
 }
 
-/* Admin Content */
+
+
 
 /*  Contact Content */
 #contact {

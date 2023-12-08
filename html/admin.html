@@ -52,78 +52,58 @@
   <!-- Main Content -->
   <main class="container-fluid">
 
-    <div class="container  mt-4  d-block d-md-flex">
-      <div class="row d-block d-md-flex">
-  <div class="col ">
-<div class="   mt-md-0 mb-4 text-center "> 
-  <button type="button" class="btn btn-dark  " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Product</button>
-</div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">New Product</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Product ID:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-             <div class="mb-3">
-              <label for="message-text" class="col-form-label">Product Description:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Product imgUrl:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-           
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Product Price:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save Product</button>
-        </div>
+      <div class="container text-end mt-3 mb-0"  >
+        <button class="btn btn-dark  " type="button" aria-expanded="false" id="sort-btn">
+          Sort by Price
+        </button>
+
       </div>
+
+
     </div>
-  </div>
-  </div>
-</div>
-<div class="col  mb-4  mt-2  text-center"> 
-  <button class="btn btn-dark  " type="button"aria-expanded="false" id="sort-btn">
-    Sort by Price
-  </button>
+    </div>
 
-</div>
-
-
-</div>
-</div>
-
-  <div class="container " id="table">
-    <table class="table mt-5 m-0 text-center">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Description</th>
-          <th scope="col">Image</th>
-          <th scope="col">Price</th>
-        </tr>
+    <div class="container " id="table">
+      <table class="table mt-5 m-0 text-center">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Description</th> 
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+          </tr>
 
 
 
-      <tbody id="Products-data">
+        <tbody id="Products-data">
 
-      </tbody>
-      </thead>
-    </table>
- 
+        </tbody>
+        </thead>
+      </table>
+      <table class="SecTeb d-none d-md-block">
+        <thead>
+          <tr  >
+          
+            <th>
+              <input type="text" placeholder="Description" id="newDec" required>
+            </th>
+            <th>
+              <input type="text" placeholder="imgURl" id="newImg" required>
+            </th>
+            <th>
+              <input type="number" placeholder="Price" id="newPrice" required>
+            </th>
+            <th>
+              <button class="btn btn-dark    " type="button" aria-expanded="false" id="Add-btn">
+                Add Product
+              </button>
+      
+            </th>
+          </tr>
+       
+        </thead>
+      </table>
+
   </main>
 
   <!-- Footer -->
